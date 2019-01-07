@@ -1,3 +1,5 @@
+package beverages;
+
 public class Coffee extends AbstractBeverage{
     public Coffee() {
         this(INITIAL_AMOUNT);

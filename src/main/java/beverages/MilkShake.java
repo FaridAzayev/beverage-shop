@@ -1,3 +1,5 @@
+package beverages;
+
 public class MilkShake extends AbstractBeverage{
     public MilkShake() {
         this(INITIAL_AMOUNT);

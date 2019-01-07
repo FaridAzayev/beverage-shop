@@ -1,3 +1,5 @@
+package beverages;
+
 public abstract class AbstractBeverage implements Beverage{
     public static final int INITIAL_AMOUNT = 1;
     private int cost;
