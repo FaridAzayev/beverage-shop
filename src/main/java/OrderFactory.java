@@ -17,6 +17,19 @@ public class OrderFactory {
         return this;
     }
 
+    public OrderFactory add (BeverageType beverageType, int amount) {
+        switch (beverageType) {
+            case TEA:
+                beverages.add(new Tea(amount));
+                break;
+            case COFFEE:
+                beverages.add(new Coffee(amount));
+                break;
+        }
+
+        return this;
+    }
+
     public List<Beverage> getBeverages() {
         return beverages;
     }
