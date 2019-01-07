@@ -42,4 +42,11 @@ class OrderTest {
 
         assertThat(factory.beverages.get(0).class).isEqualTo(Tea.class)
     }
+
+    @Test void shouldAddMilkshakeOrder(){
+        OrderFactory factory = new OrderFactory()
+
+        factory.add(BeverageType.MILKSHAKE)
+
+    }
 }
