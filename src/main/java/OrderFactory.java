@@ -1,7 +1,6 @@
 public class OrderFactory implements Order {
-    private BeverageType beverageType;
 
-    public OrderFactory(BeverageType beverageType) {
-        this.beverageType = beverageType;
+    public static Order add (BeverageType beverageType) {
+        return null;
     }
 }
