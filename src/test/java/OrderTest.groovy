@@ -2,9 +2,8 @@ import org.junit.Test
 
 class OrderTest {
     @Test void shouldCreateBeverageOrder(){
-        List<Order> orderList =  new ArrayList<>();
-
-        orderList.add(OrderFactory.add(BeverageType.TEA))
-        orderList.add(OrderFactory.add(BeverageType.COFFEE))
+        OrderFactory factory = new OrderFactory();
+        factory.add(BeverageType.TEA)
+        factory.add(BeverageType.COFFEE)
     }
 }
