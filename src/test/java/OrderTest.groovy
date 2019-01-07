@@ -33,4 +33,13 @@ class OrderTest {
 
         assertThat(factory.beverages.get(0).class).isEqualTo(Tea.class)
     }
+
+    @Test void shouldCreateOrderWithAmount(){
+        OrderFactory factory = new OrderFactory()
+        int amount = 5
+
+        factory.add(BeverageType.TEA, amount)
+
+        assertThat(factory.beverages.get(0).class).isEqualTo(Tea.class)
+    }
 }
