@@ -53,4 +53,16 @@ class OrderTest {
 
         assertThat(factory.beverages.get(0).class).isEqualTo(MilkShake.class)
     }
+
+    @Test void shouldGetTotalCostOfOrder(){
+        OrderFactory factory = new OrderFactory()
+
+        factory.add(BeverageType.MILKSHAKE)
+                .add(BeverageType.TEA)
+
+        MilkShake milkShake = new MilkShake()
+        Tea tea = new Tea()
+
+        assertThat(factory.total()).isEqualTo(milkShake.cost()+ tea.cost())
+    }
 }
