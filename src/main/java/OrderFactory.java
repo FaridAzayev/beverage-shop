@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderFactory implements Order {
-    List<Order> orderList =  new ArrayList<>();
+public class OrderFactory {
+    List<Beverage> beverages =  new ArrayList<>();
 
     public OrderFactory add (BeverageType beverageType) {
-        orderList.add(null);
+        beverages.add(null);
         return null;
     }
 
-    public List<Order> getOrderList() {
-        return orderList;
+    public List<Beverage> getBeverages() {
+        return beverages;
     }
 }
