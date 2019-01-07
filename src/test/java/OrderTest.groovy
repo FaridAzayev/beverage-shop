@@ -1,4 +1,7 @@
-import org.junit.Before
+import beverages.AbstractBeverage
+import beverages.Coffee
+import beverages.MilkShake
+import beverages.Tea
 import org.junit.Test
 import static org.assertj.core.api.Assertions.*
 
