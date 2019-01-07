@@ -10,6 +10,7 @@ public abstract class AbstractOrderFactory implements Order{
     public String receipt() {
         StringBuilder sb = new StringBuilder();
         beverageList.forEach(b-> sb.append(getFormattedReceiptText(b)));
+        sb.append("TOTAL: ").append(total());
         return sb.toString();
     }
 
@@ -23,7 +24,7 @@ public abstract class AbstractOrderFactory implements Order{
     }
 
     private String getFormattedReceiptText(Beverage x) {
-        return String.format("%s ........... %d*%d = %d"
+        return String.format("%s ........... %d*%d = %d\n"
                 , x.getClass().getName().split("\\w+\\.")[1]
                 , x.cost()
                 , x.amount()
