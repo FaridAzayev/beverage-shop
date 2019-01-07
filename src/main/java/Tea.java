@@ -1,19 +1,9 @@
-public class Tea implements Beverage{
-    private int amount = 1;
-
-    public int cost() {
-        return 5;
-    }
-
-    public int amount() {
-        return amount;
-    }
-
+public class Tea extends AbstractBeverage{
     public Tea() {
-        this(1);
+        this(INITIAL_AMOUNT);
     }
 
     public Tea(int amount) {
-        this.amount = amount;
+        super(5, amount);
     }
 }

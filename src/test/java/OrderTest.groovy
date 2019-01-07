@@ -10,7 +10,6 @@ class OrderTest {
         factory.add(BeverageType.TEA)
 
         assertThat(factory.beverages.get(0).class).isEqualTo(Tea.class)
-        assertThat(factory.beverages.get(0).amount()).isEqualTo(INITIAL_AMOUNT)
     }
 
     @Test void shouldCreateCoffeeOrder(){
@@ -18,7 +17,13 @@ class OrderTest {
         factory.add(BeverageType.COFFEE)
 
         assertThat(factory.beverages.get(0).class).isEqualTo(Coffee.class)
-        assertThat(factory.beverages.get(0).amount()).isEqualTo(INITIAL_AMOUNT)
+    }
+
+    @Test void checkInitialAmountOfBeverage(){
+        OrderFactory factory = new OrderFactory()
+        factory.add(BeverageType.COFFEE)
+
+        assertThat(factory.beverages.get(0).amount()).isEqualTo(AbstractBeverage.INITIAL_AMOUNT)
     }
 
     @Test void shouldAddChainedOrder(){
@@ -27,6 +32,5 @@ class OrderTest {
                 .add(BeverageType.COFFEE)
 
         assertThat(factory.beverages.get(0).class).isEqualTo(Tea.class)
-        assertThat(factory.beverages.get(1).class).isEqualTo(Coffee.class)
     }
 }
