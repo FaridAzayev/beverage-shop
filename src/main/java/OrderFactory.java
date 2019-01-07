@@ -12,6 +12,10 @@ public class OrderFactory {
             case COFFEE:
                 beverages.add(new Coffee());
                 break;
+            case MILKSHAKE:
+                beverages.add(new MilkShake());
+                break;
+            default: throw new RuntimeException();
         }
 
         return this;
@@ -25,6 +29,10 @@ public class OrderFactory {
             case COFFEE:
                 beverages.add(new Coffee(amount));
                 break;
+            case MILKSHAKE:
+                beverages.add(new MilkShake(amount));
+                break;
+            default: throw new RuntimeException();
         }
 
         return this;

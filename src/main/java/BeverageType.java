@@ -1,4 +1,5 @@
 public enum BeverageType {
     TEA,
-    COFFEE
+    COFFEE,
+    MILKSHAKE
 }

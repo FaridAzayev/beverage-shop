@@ -48,5 +48,6 @@ class OrderTest {
 
         factory.add(BeverageType.MILKSHAKE)
 
+        assertThat(factory.beverages.get(0).class).isEqualTo(MilkShake.class)
     }
 }
