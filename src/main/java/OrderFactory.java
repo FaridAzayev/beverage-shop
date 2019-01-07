@@ -5,8 +5,16 @@ public class OrderFactory {
     List<Beverage> beverages =  new ArrayList<>();
 
     public OrderFactory add (BeverageType beverageType) {
-        beverages.add(null);
-        return null;
+        switch (beverageType) {
+            case TEA:
+                beverages.add(new Tea());
+                break;
+            case COFFEE:
+                beverages.add(new Coffee());
+                break;
+        }
+
+        return this;
     }
 
     public List<Beverage> getBeverages() {
