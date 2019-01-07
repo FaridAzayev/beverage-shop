@@ -1,7 +1,12 @@
 public class BeverageShop {
     public static void main(String[] args) {
-        Order order = new OrderFactory()
-                .add(BeverageType.COFFEE,5)
+        printOrderReceipt(new OrderFactoryWithSwitch());
+        printOrderReceipt(new OrderFactoryWithMap());
+    }
+
+    private static void printOrderReceipt(AbstractOrderFactory factory) {
+        Order order = factory
+                .add(BeverageType.COFFEE, 5)
                 .add(BeverageType.MILKSHAKE)
                 .add(BeverageType.TEA);
 

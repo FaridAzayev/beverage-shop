@@ -1,3 +1,4 @@
+import beverages.AbstractBeverage;
 import beverages.Beverage;
 
 import java.util.ArrayList;
@@ -5,6 +6,12 @@ import java.util.List;
 
 public abstract class AbstractOrderFactory implements Order{
     protected List<Beverage> beverageList =  new ArrayList<>();
+
+    abstract AbstractOrderFactory add (BeverageType beverageType, int amount);
+
+    public AbstractOrderFactory add(BeverageType beverageType){
+        return add (beverageType, AbstractBeverage.INITIAL_AMOUNT);
+    }
 
     @Override
     public String receipt() {
