@@ -8,7 +8,6 @@ import org.junit.Test
 import static org.assertj.core.api.Assertions.*
 
 class OrderTest {
-    int INITIAL_AMOUNT = 1
     AbstractOrderFactory factory
 
     void init(){
