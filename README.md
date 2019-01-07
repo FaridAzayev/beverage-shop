@@ -1,7 +1,8 @@
 # beverage-shop
 This is application simulates shop, you can order beverages and print receipt.
 In this project I tried demonstrate TDD approach for designing projects, also usage of fluent api, factory and command patterns
-  Basically this switch
+
+Basically this switch
   
         switch (beverageType) {
             case TEA:
@@ -16,7 +17,7 @@ In this project I tried demonstrate TDD approach for designing projects, also us
             default: throw new RuntimeException();
         }
         
-  converted to this Map
+converted to this Map
   
         Map<BeverageType, Request<?>> beverageRequests = new HashMap<>();
         beverageRequests.get(beverageType).add(amount);
